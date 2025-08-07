@@ -1,0 +1,8 @@
+../design/rv_alu.sv
+../design/rv_bu.sv
+../design/rv_fdu.sv
+../design/rv_rf.sv
+../design/rv_cpu.sv
+-sverilog
+../checker/cpu_bind.sv
+
