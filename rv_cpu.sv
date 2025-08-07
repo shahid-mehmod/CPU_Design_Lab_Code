@@ -53,7 +53,7 @@ assign i_dn = sys_i_dn;
 assign be = sys_be;
 assign wr_data = sys_wr_data;
 assign sys_rd_data = rd_data;
-assign ack = sys_ack;
+assign sys_ack = ack;
 assign intr = sys_intr;
   
 assign rf_we      = alu_bu_result_valid & alu_bu_result_reg_memn;
