@@ -109,15 +109,15 @@ module rv_bu (
 	assign valid_req = fetch_req | alu_wr_req;
 	always @(posedge clk) begin
 		fetch_req   <= reset ? 1'b0 : fetch_valid;
-		faddr       <= reset ? 32'd0: fetch_addr;
+		faddr       <= reset ? 32'dx: fetch_addr;
 		alu_wr_req  <= reset ? 1'b0 : alu_result_valid & ~alu_result_reg_memn;
-		alu_wr_data <= reset ? 32'd0 : alu_result;
-		alu_wr_addr <= reset ? 32'd0 : alu_result_addr;
+		alu_wr_data <= reset ? 32'dx : alu_result;
+		alu_wr_addr <= reset ? 32'dx : alu_result_addr;
 	end
 
 	always @(posedge clk) begin
 		instr_word_valid <= reset ? 1'b0 : ivalid;
-		instruction_word <= reset ? 32'd0 : din;
+		instruction_word <= reset ? 32'dx : din;
 	end
 endmodule
 `endif	
